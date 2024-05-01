@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM-model</title>
+	</head>
+    <style>
+        body{
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+    <script>
+        document.getElementById("kezd").value="12px";
+        document.getElementById("vege").style.fontSize=val+"px";
+     
+        function dom(ertek){
+            document.getElementById("kezd").value=ertek+"px";
+            document.getElementById("vege").style.fontSize=ertek+"px";	
+        }
+    </script>
+<body>
+    <input type="range" min="12" max="72" value="12"  oninput="dom(this.value);"/>
+    <input type="text" size="1" id="kezd" />
+	<center><label id="vege">Dom-modell</label></center>
+</body>	
+</html>
